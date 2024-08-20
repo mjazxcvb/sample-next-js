@@ -17,17 +17,220 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply text-black bg-accent-200;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Comico";
+    src: url("/fonts/Comico-Regular.otf");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Recia";
+    src: url("/fonts/Recia-Light.otf");
+    font-weight: 100;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Recia";
+    src: url("/fonts/Recia-Medium.otf");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Recia";
+    src: url("/fonts/Recia-Regular.otf");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Recia";
+    src: url("/fonts/Recia-Semibold.otf");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Recia";
+    src: url("/fonts/Recia-Bold.otf");
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GeneralSans";
+    src: url("/fonts/GeneralSans-Light.otf");
+    font-weight: 100;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GeneralSans";
+    src: url("/fonts/GeneralSans-Medium.otf");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GeneralSans";
+    src: url("/fonts/GeneralSans-Regular.otf");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GeneralSans";
+    src: url("/fonts/GeneralSans-Semibold.otf");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GeneralSans";
+    src: url("/fonts/GeneralSans-Bold.otf");
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .section {
+    @apply min-h-screen;
+    @apply flex flex-col justify-center items-center;
+  }
+
+  .header-title {
+    @apply font-comico text-5xl hover:text-black text-black/80 cursor-pointer;
+  }
+
+  .header-menu {
+    @apply font-general text-2xl hover:text-black text-black/50;
+    @apply px-10 cursor-pointer;
+    @apply font-extralight;
+  }
+
+  .typing-title {
+    @apply font-general text-5xl text-black;
+    @apply font-extralight hover:text-black/80;
+    @apply cursor-pointer;
+  }
+
+  .typing-sub {
+    @apply font-general text-xl hover:text-black;
+    @apply font-light text-right text-primary;
+  }
+
+  .about {
+    @apply absolute bottom-10 text-center;
+    @apply font-general text-xl text-black;
+    @apply font-extralight text-right hover:text-black/80;
+  }
+
+  .exp {
+    @apply text-center;
+    @apply font-general text-xl text-black;
+    @apply font-extralight text-right group-hover:text-primary/90;
+  }
+
+  .related {
+    @apply text-center font-extralight;
+    @apply font-general text-sm text-black/60;
+    @apply group-hover:text-black;
+  }
+
+  .description {
+    @apply text-center font-extralight;
+    @apply font-general text-base text-black/60;
+    @apply group-hover:text-black;
+  }
+
+  .link {
+    @apply text-center font-extralight;
+    @apply font-general text-base text-primary underline;
+    @apply hover:text-primary/70;
+  }
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 0.2rem solid #9e2a2b;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.25rem;
+  height: 3.5rem;
+  animation: typing 2.5s steps(40, end), blink-caret 0.8s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #9e2a2b;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shadows {
+  @apply font-recia font-extralight text-black;
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: -2px 5px 2px #ced0d3;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  font-size: 40px;
+  transition: all 0.25s ease-out;
+}
+.shadows:hover {
+  text-shadow: -2px 6px 5px #ced0d3;
+}
+
+.section-header {
+  animation: left-to-center 1.5s ease-out forwards;
+}
+
+@keyframes left-to-center {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 0%;
   }
 }
