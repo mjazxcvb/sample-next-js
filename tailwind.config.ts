@@ -23,7 +23,7 @@ const config: Config = {
         primary: "#e04863",
         secondary: "#5d576b",
         accent: {
-          "100": "#fcfcfc",
+          "100": "#c8d5b9",
           "200": "#fffae3",
         },
       },

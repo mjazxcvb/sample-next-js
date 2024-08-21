@@ -131,7 +131,7 @@ html, body {
   }
 
   .header-menu {
-    @apply font-general hover:text-black text-black/50;
+    @apply font-general hover:text-black text-accent-200;
     @apply lg:px-10 cursor-pointer;
     @apply font-extralight text-base px-2;
     @apply lg:text-2xl xl:text-2xl xl:px-10
@@ -183,7 +183,7 @@ html, body {
   .card {
     @apply cursor-pointer max-w-[350px] min-h-[400px];
     @apply flex flex-col items-center justify-normal;
-    @apply bg-gradient-to-b pb-2 rounded from-accent-100/40 to-accent-200/40;
+    @apply bg-gradient-to-b pb-2 rounded from-accent-100 to-accent-200/20;
     @apply rounded-lg;
   }
 }

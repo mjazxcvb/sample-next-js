@@ -46,7 +46,7 @@ export default function Experience() {
                   width={500}
                   height={200}
                   className={classNames(
-                    "object-cover h-52 w-[350px]",
+                    "object-cover h-56 w-[350px]",
                     "opacity-80 p-0.5",
                     "group-hover:p-0 group-hover:opacity-100",
                     "rounded-t-lg"
