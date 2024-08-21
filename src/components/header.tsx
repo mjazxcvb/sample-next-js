@@ -14,11 +14,13 @@ export default function Header() {
   };
 
   const scrollToSkills = () => {
-    window.scrollTo({ top: window.innerHeight * 2.9, behavior: "smooth" });
+    const skillDiv = (document.getElementById('skills')?.offsetTop || 0) - 100
+    console.log({skillDiv})
+    window.scrollTo({ top: skillDiv , behavior: "smooth" });
   };
 
   return (
-    <header className="fixed shadow-sm bg-accent-100 w-full px-[5%] py-8 z-50">
+    <header className="fixed shadow-sm bg-accent-100 w-full xl:px-[5%] lg:py-8 z-50 px-10 py-4">
       <div className="w-full flex flex-col md:flex-row justify-between items-center gap-10">
         <button className="header-title" onClick={scrollToTop}>
           MJA

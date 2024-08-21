@@ -22,7 +22,7 @@ export default function Tools() {
   }, []);
 
   return (
-    <section className="section" id="skills">
+    <section className="section py-10" id="skills">
       <div className="w-9/12 flex flex-col items-end pb-2">
         <div className="flex flex-row w-4/12">
           <div className="container">
@@ -34,9 +34,9 @@ export default function Tools() {
           </div>
         </div>
       </div>
-      <div className="gap-6 flex flex-row flex-wrap w-8/12">
-        {lang.map((i) => (
-          <div className="group cursor-pointer" key={i.name}>
+      <div className="gap-6 flex flex-row justify-between xl:justify-center flex-wrap w-8/12">
+        {lang.map((i, idx) => (
+          <div className="group cursor-pointer" key={idx}>
             <div className="flex flex-col relative p-2">
               <div
                 className={classNames(

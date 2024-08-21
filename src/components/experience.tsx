@@ -25,7 +25,7 @@ export default function Experience() {
   return (
     <section className="section pt-48 pb-32 bg-accent-100 " id="projects">
       <div className="w-9/12 flex flex-col items-start">
-        <div className="flex flex-row w-4/12">
+        <div className="flex flex-row w-6/12 xl:w-4/12">
           <div className="container">
             <div className={classNames("shadows")}>
               {"Recent Projects".split("").map((i) => (
@@ -36,8 +36,8 @@ export default function Experience() {
         </div>
       </div>
       <div className="mt-10 gap-8 flex flex-row flex-wrap w-10/12 relative items-center justify-center">
-        {experiences.map((i) => (
-          <a key={i.company} href={i.link}>
+        {experiences.map((i, idx) => (
+          <a key={idx} href={i.link}>
             <div className="card group">
               <div className="flex flex-col justify-center items-center w-full">
                 <Image
@@ -46,7 +46,7 @@ export default function Experience() {
                   width={500}
                   height={200}
                   className={classNames(
-                    "object-cover h-52 w-[400px]",
+                    "object-cover h-52 w-[350px]",
                     "opacity-80 p-0.5",
                     "group-hover:p-0 group-hover:opacity-100",
                     "rounded-t-lg"

@@ -16,10 +16,14 @@
   }
 }
 
-body {
+html, body {
   @apply text-black bg-accent-100;
   animation: fadeBackground 3s;
   animation-fill-mode: forwards;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
 }
 
 @layer base {
@@ -127,20 +131,22 @@ body {
   }
 
   .header-menu {
-    @apply font-general text-2xl hover:text-black text-black/50;
-    @apply px-10 cursor-pointer;
-    @apply font-extralight;
+    @apply font-general hover:text-black text-black/50;
+    @apply lg:px-10 cursor-pointer;
+    @apply font-extralight text-base px-2;
+    @apply lg:text-2xl xl:text-2xl xl:px-10
   }
 
   .typing-title {
-    @apply font-general text-5xl text-black;
+    @apply font-general  text-black;
     @apply font-extralight hover:text-black/80;
     @apply cursor-pointer;
+    @apply lg:text-5xl text-xl
   }
 
   .typing-sub {
-    @apply font-general text-xl hover:text-black;
-    @apply font-light text-right text-primary;
+    @apply font-general md:text-xl hover:text-black;
+    @apply font-light text-right text-primary text-base
   }
 
   .about {
@@ -183,12 +189,12 @@ body {
 }
 
 .typewriter h1 {
+  @apply xl:h-14 h-8;
   overflow: hidden;
   border-right: 0.2rem solid #9e2a2b;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.25rem;
-  height: 3.5rem;
   animation: typing 2.5s steps(40, end), blink-caret 0.8s step-end infinite;
 }
 
@@ -226,6 +232,7 @@ body {
   text-shadow: -1px 1px 1px #8d99ae;
   font-size: 40px;
 }
+
 .shadows:hover {
   text-shadow: -1px 1px 1px rgb(43 45 66 1);
 }
