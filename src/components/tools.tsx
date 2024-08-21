@@ -23,12 +23,14 @@ export default function Tools() {
 
   return (
     <section className="section" id="skills">
-      <div className="flex flex-row w-4/12 mb-10">
-        <div className="container">
-          <div className={classNames("shadows")}>
-            {"Skills".split("").map((i) => (
-              <span key={i}>{i}</span>
-            ))}
+      <div className="w-9/12 flex flex-col items-end pb-2">
+        <div className="flex flex-row w-4/12">
+          <div className="container">
+            <div className={classNames("shadows")}>
+              {"Skills".split("").map((i) => (
+                <span key={i}>{i}</span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

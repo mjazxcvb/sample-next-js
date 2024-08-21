@@ -10,7 +10,7 @@ export default function Header() {
   };
 
   const scrollToProjects = () => {
-    window.scrollTo({ top: window.innerHeight * 1.1, behavior: "smooth" });
+    window.scrollTo({ top: window.innerHeight * 1.02, behavior: "smooth" });
   };
 
   const scrollToSkills = () => {

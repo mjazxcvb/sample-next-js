@@ -23,15 +23,15 @@ export default function Experience() {
   }, []);
 
   return (
-    <section className="section pt-48 pb-32 bg-accent-100" id="projects">
-      <div className="flex flex-row w-4/12">
-        <div className="container">
-          <div
-            className={classNames("shadows")}
-          >
-            {"Recent Projects".split("").map((i) => (
-              <span key={i}>{i}</span>
-            ))}
+    <section className="section pt-48 pb-32 bg-accent-100 " id="projects">
+      <div className="w-9/12 flex flex-col items-start">
+        <div className="flex flex-row w-4/12">
+          <div className="container">
+            <div className={classNames("shadows")}>
+              {"Recent Projects".split("").map((i) => (
+                <span key={i}>{i}</span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
