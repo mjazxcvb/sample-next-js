@@ -25,12 +25,8 @@ export default function Tools() {
     <section className="section" id="skills">
       <div className="flex flex-row w-4/12 mb-10">
         <div className="container">
-          <div
-            className={classNames("shadows hover:text-accent-100 cursor-pointer", {
-              "section-header": animate,
-            })}
-          >
-            {"SKILLS".split("").map((i) => (
+          <div className={classNames("shadows")}>
+            {"Skills".split("").map((i) => (
               <span key={i}>{i}</span>
             ))}
           </div>

@@ -20,11 +20,11 @@ const config: Config = {
       },
       colors: {
         black: "#2b2d42",
-        primary: "#9e2a2b",
-        secondary: "#8d99ae",
+        primary: "#e04863",
+        secondary: "#5d576b",
         accent: {
-          "100": "#fff1e6",
-          "200": "#eddcd2",
+          "100": "#fcfcfc",
+          "200": "#fffae3",
         },
       },
     },

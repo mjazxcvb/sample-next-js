@@ -1,4 +1,5 @@
 import { TLinks } from "@/types";
+import { Github, Linkedin, Send } from 'lucide-react'
 
 export const lang = [
   {
@@ -31,7 +32,7 @@ export const lang = [
   },
   {
     name: "tailwind",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-plain-wordmark.svg",
   },
   {
     name: "node",
@@ -72,13 +73,16 @@ export const links: TLinks[] = [
   {
     name: "linkedin",
     link: "https://www.linkedin.com/in/mj-aguelo/",
+    Icon: () => <Linkedin size={28} strokeWidth={1} />
   },
   {
     name: "github",
     link: "https://github.com/mjazxcvb",
+    Icon: () => <Github size={28} strokeWidth={1} />
   },
   {
     name: "email",
     link: "mailto:mjma.dev@gmail.com",
+    Icon: () => <Send size={28} strokeWidth={1} />
   },
 ];

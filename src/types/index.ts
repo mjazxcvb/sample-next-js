@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type TExp = {
   company: string;
   related: string[];
@@ -8,4 +10,5 @@ export type TExp = {
 export type TLinks = {
   name: string;
   link: string;
+  Icon: () => ReactNode
 };

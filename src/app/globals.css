@@ -17,7 +17,9 @@
 }
 
 body {
-  @apply text-black bg-accent-200;
+  @apply text-black bg-accent-100;
+  animation: fadeBackground 3s;
+  animation-fill-mode: forwards;
 }
 
 @layer base {
@@ -148,27 +150,35 @@ body {
   }
 
   .exp {
-    @apply text-center;
     @apply font-general text-xl text-black;
-    @apply font-extralight text-right group-hover:text-primary/90;
+    @apply font-extralight text-right;
+    @apply group-hover:text-black/80 tracking-widest;
   }
 
   .related {
-    @apply text-center font-extralight;
-    @apply font-general text-sm text-black/60;
+    @apply font-extralight;
+    @apply font-recia text-sm text-black/60;
     @apply group-hover:text-black;
+    @apply leading-6 tracking-wide;
   }
 
   .description {
     @apply text-center font-extralight;
-    @apply font-general text-base text-black/60;
+    @apply font-recia text-base text-black/60;
     @apply group-hover:text-black;
   }
 
   .link {
     @apply text-center font-extralight;
-    @apply font-general text-base text-primary underline;
-    @apply hover:text-primary/70;
+    @apply font-general text-base text-accent-100 underline;
+    @apply hover:text-primary/60;
+  }
+
+  .card {
+    @apply cursor-pointer max-w-[350px] min-h-[400px];
+    @apply flex flex-col items-center justify-normal;
+    @apply bg-gradient-to-b pb-2 rounded from-accent-100/40 to-accent-200/40;
+    @apply rounded-lg;
   }
 }
 
@@ -208,18 +218,16 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .shadows {
-  @apply font-recia font-extralight text-black;
-  position: relative;
-  text-transform: uppercase;
-  text-shadow: -2px 5px 2px #ced0d3;
-  letter-spacing: -0.05em;
-  text-transform: uppercase;
+  @apply font-general font-extralight text-black;
+  @apply hover:text-black/70 cursor-pointer;
+  @apply relative uppercase;
+  text-shadow: -1px 1px 1px #8d99ae;
   font-size: 40px;
-  transition: all 0.25s ease-out;
 }
 .shadows:hover {
-  text-shadow: -2px 6px 5px #ced0d3;
+  text-shadow: -1px 1px 1px rgb(43 45 66 1);
 }
 
 .section-header {
@@ -228,9 +236,18 @@ body {
 
 @keyframes left-to-center {
   0% {
-    left: -150%;
+    width: 0%;
   }
   100% {
-    left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeBackground {
+  from {
+    background-color: #fcfcfc;
+  }
+  to {
+    background-color: #fffae3;
   }
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import { lang } from "@/constants";
 import { experiences } from "@/constants/work";
 import classNames from "classnames";
 import Image from "next/image";
@@ -24,29 +23,23 @@ export default function Experience() {
   }, []);
 
   return (
-    <section className="section pt-48" id="projects">
-      <div className="flex flex-row w-4/12 ">
+    <section className="section pt-48 pb-32 bg-accent-100" id="projects">
+      <div className="flex flex-row w-4/12">
         <div className="container">
           <div
-            className={classNames(
-              "shadows hover:text-accent-100 cursor-pointer",
-              {
-                "section-header": animate,
-              }
-            )}
+            className={classNames("shadows")}
           >
-            {"PROJECTS".split("").map((i) => (
+            {"Recent Projects".split("").map((i) => (
               <span key={i}>{i}</span>
             ))}
           </div>
         </div>
       </div>
-      <div className="mt-10 gap-5 flex flex-row flex-wrap w-10/12 relative items-center justify-center">
+      <div className="mt-10 gap-8 flex flex-row flex-wrap w-10/12 relative items-center justify-center">
         {experiences.map((i) => (
           <a key={i.company} href={i.link}>
-            <div className="cursor-pointer group max-w-[400px] min-h-[400px] flex flex-col items-center justify-normal">
-              <h3 className="exp">{i.company}</h3>
-              <div className="flex flex-col justify-center items-center">
+            <div className="card group">
+              <div className="flex flex-col justify-center items-center w-full">
                 <Image
                   src={i.images}
                   alt={i.company}
@@ -54,11 +47,23 @@ export default function Experience() {
                   height={200}
                   className={classNames(
                     "object-cover h-52 w-[400px]",
-                    "opacity-70 p-0.5",
-                    "group-hover:p-0 group-hover:opacity-100"
+                    "opacity-80 p-0.5",
+                    "group-hover:p-0 group-hover:opacity-100",
+                    "rounded-t-lg"
                   )}
                 />
-                <p className="w-[80%] related pt-2">{i.related.join(" •  ")}</p>
+                <div className="flex flex-col pt-3 pb-2 px-4 justify-center items-start w-full">
+                  <h3
+                    className={classNames("exp", {
+                      "group-hover:underline": !!i.link,
+                    })}
+                  >
+                    {i.company}
+                  </h3>
+                  <p className="w-[80%] related pt-2">
+                    {i.related.join(" •  ")}
+                  </p>
+                </div>
               </div>
             </div>
           </a>
