@@ -82,7 +82,7 @@ export const links: TLinks[] = [
   },
   {
     name: "email",
-    link: "mailto:mjma.dev@gmail.com",
+    link: "mailto:mjmaguelo@gmail.com",
     Icon: () => <Send size={28} strokeWidth={1} />
   },
 ];
