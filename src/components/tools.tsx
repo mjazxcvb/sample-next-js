@@ -26,7 +26,7 @@ export default function Tools() {
       <div className="w-9/12 flex flex-col items-end pb-2">
         <div className="flex flex-row w-4/12">
           <div className="container">
-            <div className={classNames("shadows")}>
+            <div className={classNames("shadows-black")}>
               {"Skills".split("").map((i) => (
                 <span key={i}>{i}</span>
               ))}

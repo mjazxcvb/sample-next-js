@@ -21,10 +21,10 @@ const config: Config = {
       colors: {
         black: "#2b2d42",
         primary: "#e04863",
-        secondary: "#5d576b",
+        secondary: "#f77f00",
         accent: {
-          "100": "#c8d5b9",
-          "200": "#fffae3",
+          "100": "#023047",
+          "200": "#f1faee",
         },
       },
     },

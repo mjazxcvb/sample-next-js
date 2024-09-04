@@ -25,7 +25,7 @@ export default function Header() {
         <button className="header-title" onClick={scrollToTop}>
           MJA
         </button>
-        <div className="flex flex-row divide-x divide-black justify-center items-center">
+        <div className="flex flex-row divide-x divide-white justify-center items-center">
           <button className="header-menu" onClick={scrollToProjects}>
             Projects
           </button>

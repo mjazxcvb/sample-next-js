@@ -127,11 +127,11 @@ html, body {
   }
 
   .header-title {
-    @apply font-comico text-5xl hover:text-black text-black/80 cursor-pointer;
+    @apply font-comico text-5xl hover:text-accent-200/80 text-accent-200 cursor-pointer;
   }
 
   .header-menu {
-    @apply font-general hover:text-black text-accent-200;
+    @apply font-general hover:text-accent-200/80 text-accent-200;
     @apply lg:px-10 cursor-pointer;
     @apply font-extralight text-base px-2;
     @apply lg:text-2xl xl:text-2xl xl:px-10
@@ -176,15 +176,16 @@ html, body {
 
   .link {
     @apply text-center font-extralight;
-    @apply font-general text-base text-accent-100 underline;
-    @apply hover:text-primary/60;
+    @apply font-general text-base hover:text-accent-100 underline;
+    @apply text-white;
   }
 
   .card {
     @apply cursor-pointer max-w-[350px] min-h-[400px];
     @apply flex flex-col items-center justify-normal;
-    @apply bg-gradient-to-b pb-2 rounded from-accent-100 to-accent-200/20;
+    @apply bg-gradient-to-b pb-2 rounded from-white to-accent-200;
     @apply rounded-lg;
+    @apply hover:bg-white
   }
 }
 
@@ -226,14 +227,22 @@ html, body {
 }
 
 .shadows {
-  @apply font-general font-extralight text-black;
-  @apply hover:text-black/70 cursor-pointer;
+  @apply font-general font-extralight text-accent-200/70;
+  @apply hover:text-accent-200 cursor-pointer;
   @apply relative uppercase;
   text-shadow: -1px 1px 1px #8d99ae;
   font-size: 40px;
 }
 
-.shadows:hover {
+.shadows-black {
+  @apply font-general font-extralight text-accent-100/70;
+  @apply hover:text-accent-100 cursor-pointer;
+  @apply relative uppercase;
+  text-shadow: -1px 1px 1px #8d99ae;
+  font-size: 40px;
+}
+
+.shadows:hover, .shadows-black:hover  {
   text-shadow: -1px 1px 1px rgb(43 45 66 1);
 }
 
@@ -255,6 +264,6 @@ html, body {
     background-color: #fcfcfc;
   }
   to {
-    background-color: #fffae3;
+    background-color: #ffffff;
   }
 }
